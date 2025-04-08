@@ -13,6 +13,11 @@
             label="Image"
             type="file"
         />
+        <div>
+            @if ($form->image)
+                <img src="{{$form->image->temporaryUrl()}}" class="w-12 h-12 rounded-xl" />
+            @endif
+        </div>
 
         <flux:textarea
             wire:model="form.content"
