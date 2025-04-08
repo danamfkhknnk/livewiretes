@@ -28,7 +28,7 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth','verified'])->group(function(){
     Route::get('/posts', PostIndex::class)->name('posts.index');
     Route::get('/posts/create', PostCreate::class)->name('posts.create');
-    Route::get('/posts/{id}/edit', PostEdit::class)->name('posts.edit');
+    Route::get('/posts/{post}/edit', PostEdit::class)->name('posts.edit');
 });
 
 require __DIR__.'/auth.php';
